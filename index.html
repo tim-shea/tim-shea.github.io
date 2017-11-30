@@ -8,7 +8,6 @@
 	background-color: #333;
 	position: fixed;
 	width: 100%;
-	height: 48px;
 }
 
 .topnav-spacer {
@@ -65,13 +64,20 @@
 	}
 }
 
+.banner {
+	padding: 0.5em;
+	background-image: url('img/EastViewFromUCM.jpg');
+	background-size: cover;
+	background-position: center bottom;
+	background-color: lightgray;
+}
+
 .content-section {
 	padding: 0.5em;
 }
-	
+
 .photo {
-	max-width: 90%;
-	margin-left: 5%;
+	max-width: 100%;
 }
 		</style>
 		<title>Tim Shea</title>
@@ -86,7 +92,7 @@
 		</div>
 		<div class="topnav-spacer"></div>
 		<a name="top" id="top"></a>
-		<div style="padding: 0.5em; background-image: url('img/EastViewFromUCM.jpg'); background-size: cover; background-position: center bottom; background-color: lightgray;">
+		<div class="banner">
 			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
 				<h1 style="font-family: sans-serif; color: white; margin: 0;">Tim Shea</h1>
 				<h3 style="font-family: sans-serif; color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
@@ -119,7 +125,7 @@ $(function() {
 		var target = $('#' + id);
 		console.log(target);
 		$('html, body').animate({
-			scrollTop: target.offset().top - 48
+			scrollTop: target.offset().top - $('.topnav').height()
 		}, 800);
 		showNav();
 	});

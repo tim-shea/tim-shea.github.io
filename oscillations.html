@@ -12,22 +12,10 @@
 	<body style="margin: 0; font-family: sans-serif;">
 		<div class="topnav" id="myTopnav">
 			<a class="nav-option" href="index.html">Home</a>
+			<a class="nav-option">Oscillations in Brain Networks</a>
 		</div>
 		<div class="topnav-spacer"></div>
-		<div class="banner">
-			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
-				<h1 style="font-family: sans-serif; color: white; margin: 0;">Tim Shea</h1>
-				<h3 style="font-family: sans-serif; color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
-				<h3 style="font-family: sans-serif; margin: 0;"><span id="obf"><script>
-				document.getElementById("obf").innerHTML="<n uers=\"znvygb:gvz.z.furn@tznvy.pbz\" gnetrg=\"_oynax\">rznvy</n>".replace(
-				/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
-				</script></span>
-				<a href="doc/Curriculum Vitae.pdf" target="_blank">cv</a>
-				<a href="doc/Resume.pdf" target="_blank">resume</a></h3>
-			</div>
-		</div>
-		<div class="content-section" id="slideshow-container" style="padding-left: 0;">
-			<a name="oscillations" id="oscillations"><h3>Oscillations in Brain Networks</h3></a>
+		<div class="content-section" id="slideshow-container" style="padding: 0;">
 			<img src="img/bg_model/ActionSelection.png" class="oscillation-figure"/>
 			<img src="img/bg_model/ActiveMaintenance.png" class="oscillation-figure"/>
 			<img src="img/bg_model/BumpAttractor.png" class="oscillation-figure"/>
@@ -48,16 +36,16 @@ var slideIndex = 1;
 
 function nextSlide() {
 	var slides = document.getElementsByClassName("oscillation-figure");
-	$(slides[slideIndex]).hide("slide", { direction: "left" }, 1000);
+	$(slides[slideIndex]).hide("slide", { direction: "left" }, 500);
 	slideIndex = slideIndex + 1 == slides.length ? 0 : slideIndex + 1;
-	$(slides[slideIndex]).show("slide", { direction: "right" }, 1000);
+	$(slides[slideIndex]).show("slide", { direction: "right" }, 500);
 }
 
 function previousSlide() {
 	var slides = document.getElementsByClassName("oscillation-figure");
-	$(slides[slideIndex]).hide("slide", { direction: "right" }, 1000);
+	$(slides[slideIndex]).hide("slide", { direction: "right" }, 500);
 	slideIndex = slideIndex - 1 == -1 ? slides.length - 1 : slideIndex - 1;
-	$(slides[slideIndex]).show("slide", { direction: "left" }, 1000);
+	$(slides[slideIndex]).show("slide", { direction: "left" }, 500);
 }
 
 function swipeHandler(event) {

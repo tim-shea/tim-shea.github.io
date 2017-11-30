@@ -1,7 +1,8 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+				crossorigin="anonymous"></script>
 		<style>
 .topnav {
 	overflow: hidden;
@@ -76,8 +77,18 @@
 	padding: 0.5em;
 }
 
-.photo {
+.photo-slideshow {
 	max-width: 100%;
+	height: 70%;
+	margin: 0 auto;
+}
+
+#footer {
+	-webkit-box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
+    -moz-box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
+    box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
+	margin-top: 16px;
+	background-color: #ddd;
 }
 		</style>
 		<title>Tim Shea</title>
@@ -101,13 +112,15 @@
 		<div class="content-section">
 			<a name="projects" id="projects"><h3>Projects</h3></a>
 			<p>Emergent Oscillations in Brain Networks</p>
-			<a name="photos" id="photos"><h3>Photos</h3></a>
-			<img src="img/PavlovsDogs.jpg" class="photo"/>
-			<img src="img/KayakingSelfie.jpg" class="photo"/>
-			<img src="img/SculptureGarden.jpg" class="photo"/>
-			<img src="img/WashingtonMonument.jpg" class="photo"/>
 		</div>
-		<div class="content-section">
+		<div class="content-section" id="slideshow-container" onclick="plusDivs(+1)">
+			<a name="photos" id="photos"><h3>Photos</h3></a>
+			<img src="img/PavlovsDogs.jpg" class="photo-slideshow"/>
+			<img src="img/KayakingSelfie.jpg" class="photo-slideshow"/>
+			<img src="img/SculptureGarden.jpg" class="photo-slideshow"/>
+			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"/>
+		</div>
+		<div class="content-section" id="footer">
 			<a name="contact" id="contact"><h3>Contact</h3></a>
 			<p>Timothy M. Shea</p>
 			<p>
@@ -130,7 +143,7 @@ $(function() {
 		}, 800);
 		showNav();
 	});
-
+	$("#slideshow-container").on("swipe", swipeHandler);
 });
 
 function showNav() {
@@ -140,6 +153,28 @@ function showNav() {
     } else {
         x.className = "topnav";
     }
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+	showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+	var i;
+	var x = document.getElementsByClassName("photo-slideshow");
+	if (n > x.length) {slideIndex = 1} 
+	if (n < 1) {slideIndex = x.length} ;
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none"; 
+	}
+	x[slideIndex-1].style.display = "block"; 
+}
+
+function swipeHandler(event) {
+	console.log('test');
 }
 		</script>
 	</body>

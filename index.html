@@ -2,142 +2,60 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="style.css" />
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<style>
-.topnav {
-	overflow: hidden;
-	background-color: #333;
-	position: fixed;
-	width: 100%;
-}
-
-.topnav-spacer {
-	height: 48px;
-}
-
-.topnav a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
-
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.active {
-	background-color: #4CAF50;
-	color: white;
-}
-
-.topnav .icon {
-	display: none;
-}
-
-@media screen and (max-width: 600px) {
-	.topnav a:not(:first-child) {
-		display: none;
-	}
-	.topnav a.icon {
-		float: right;
-		display: block;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.topnav.responsive {
-		position: fixed;
-	}
-	.topnav.responsive .icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	.topnav.responsive a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-}
-
-.banner {
-	padding: 0.5em;
-	background-image: url('img/EastViewFromUCM.jpg');
-	background-size: cover;
-	background-position: center bottom;
-	background-color: lightgray;
-}
-
-.content-section {
-	padding: 0.5em;
-}
-
-.photo-slideshow {
-	max-width: 100%;
-	height: 70%;
-	margin: 0 auto;
-}
-
-@media screen and (max-width: 600px) {
-	.photo-slideshow {
-		height: auto;
-	}
-}
-
-#footer {
-	-webkit-box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
-    -moz-box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
-    box-shadow: 0px -12px 8px rgba(221, 221, 221, 1);
-	margin-top: 16px;
-	background-color: #ddd;
-}
-
-::-webkit-scrollbar { width: 0px; }
-		</style>
 		<title>Tim Shea</title>
 	</head>
 	<body style="margin: 0; font-family: sans-serif;">
 		<div class="topnav" id="myTopnav">
-			<a class="nav-option">Top</a>
+			<a class="nav-option">Bio</a>
 			<a class="nav-option">Projects</a>
 			<a class="nav-option">Photos</a>
-			<a class="nav-option">Contact</a>
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showNav()">&#9776;</a>
 		</div>
 		<div class="topnav-spacer"></div>
-		<a name="top" id="top"></a>
+		<a name="bio" id="bio"></a>
 		<div class="banner">
 			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
 				<h1 style="font-family: sans-serif; color: white; margin: 0;">Tim Shea</h1>
 				<h3 style="font-family: sans-serif; color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
-			</div>
-		</div>
-		<div class="content-section">
-			<a name="projects" id="projects"><h3>Projects</h3></a>
-			<p>Emergent Oscillations in Brain Networks</p>
-		</div>
-		<div class="content-section" id="slideshow-container" onclick="plusDivs(+1)">
-			<a name="photos" id="photos"><h3>Photos</h3></a>
-			<img src="img/PavlovsDogs.jpg" class="photo-slideshow"/>
-			<img src="img/KayakingSelfie.jpg" class="photo-slideshow"/>
-			<img src="img/SculptureGarden.jpg" class="photo-slideshow"/>
-			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"/>
-		</div>
-		<div class="content-section" id="footer">
-			<a name="contact" id="contact"><h3>Contact</h3></a>
-			<p>Timothy M. Shea</p>
-			<p>
-				<span id="obf"><script>
+				<h3 style="font-family: sans-serif; margin: 0;"><span id="obf"><script>
 				document.getElementById("obf").innerHTML="<n uers=\"znvygb:gvz.z.furn@tznvy.pbz\" gnetrg=\"_oynax\">rznvy</n>".replace(
 				/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
 				</script></span>
-			</p>
+				<a href="doc/Curriculum Vitae.pdf" target="_blank">cv</a>
+				<a href="doc/Resume.pdf" target="_blank">resume</a></h3>
+			</div>
+		</div>
+		<div class="content-section">
+			<p>I'm a PhD student in California studying the mind and brain. My primary research interests are how
+			organization and dynamics in the brain give rise to complex cognition, and how humans and artificial
+			agents might learn to follow instructions and create plans. I love to play strategy games in my scarce
+			free time and whenever possible I try to retreat into the mountains.</p>
+		</div>
+		<div class="content-section">
+			<a name="projects" id="projects"><h3>Projects</h3></a>
+			<h4>Emergent Oscillations in Brain Networks</h4>
+			<p>Collaborators: Dave Noelle, Anne Warlaumont, Ramesh Balasubramaniam</p>
+			<p>Manuscript in preparation. Poster @ SfN 2017</p>
+			
+			<h4>Modeling Infant Speech Development with Spiking Neural Networks</h4>
+			<p>Advisor: Anne Warlaumont</p>
+			<p>Poster @ NCPW 2016</p>
+			
+			<h4>Deep Autoencoding of Naturalistic Infant and Parent Vocalizations</h4>
+			<p>Collaborators: Anne Warlaumont, Chris Kello, Dave Noelle, Gina Pretzer, Eric Walle</p>
+			<p>Poster @ NCPW 2016</p>
+		</div>
+		<div class="content-section" id="slideshow-container" onclick="plusDivs(+1)">
+			<a name="photos" id="photos"><h3>Photos</h3></a>
+			<img src="img/KayakingSelfie.jpg" class="photo-slideshow"/>
+			<img src="img/SculptureGarden.jpg" class="photo-slideshow"/>
+			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"/>
+			<img src="img/PavlovsDogs.jpg" class="photo-slideshow"/>
+		</div>
+		<div class="content-section" id="footer">
 		</div>
 		<script>
 $(function() {
@@ -177,9 +95,11 @@ function showDivs(n) {
 	if (n > x.length) {slideIndex = 1} 
 	if (n < 1) {slideIndex = x.length} ;
 	for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none"; 
+		x[i].style.display = "none";
+		x[i].className = "photo-slideshow fade-out";
 	}
-	x[slideIndex-1].style.display = "block"; 
+	x[slideIndex-1].style.display = "block";
+	x[slideIndex-1].className = "photo-slideshow fade-in";
 }
 
 function swipeHandler(event) {

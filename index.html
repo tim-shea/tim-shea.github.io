@@ -119,13 +119,14 @@
 		</div>
 		<script>
 $(function() {
-	//Set up menu nav
+	$('.topnav-spacer').height($('.topnav').height())
 	$('.nav-option').click(function(){
 		var id = $(this).text().toLowerCase();
 		var target = $('#' + id);
+		var offset = $('.topnav-spacer').height();
 		console.log(target);
 		$('html, body').animate({
-			scrollTop: target.offset().top - $('.topnav').height()
+			scrollTop: target.offset().top - offset
 		}, 800);
 		showNav();
 	});

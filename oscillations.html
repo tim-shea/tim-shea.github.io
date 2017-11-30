@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="icon" type="image/png" href="img/favicon2.png" sizes="32x32">
+		<title>Tim Shea</title>
+	</head>
+	<body style="margin: 0; font-family: sans-serif;">
+		<div class="topnav" id="myTopnav">
+			<a class="nav-option" href="index.html">Home</a>
+		</div>
+		<div class="topnav-spacer"></div>
+		<div class="banner">
+			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
+				<h1 style="font-family: sans-serif; color: white; margin: 0;">Tim Shea</h1>
+				<h3 style="font-family: sans-serif; color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
+				<h3 style="font-family: sans-serif; margin: 0;"><span id="obf"><script>
+				document.getElementById("obf").innerHTML="<n uers=\"znvygb:gvz.z.furn@tznvy.pbz\" gnetrg=\"_oynax\">rznvy</n>".replace(
+				/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+				</script></span>
+				<a href="doc/Curriculum Vitae.pdf" target="_blank">cv</a>
+				<a href="doc/Resume.pdf" target="_blank">resume</a></h3>
+			</div>
+		</div>
+		<div class="content-section" id="slideshow-container" style="padding-left: 0;">
+			<a name="oscillations" id="oscillations"><h3>Oscillations in Brain Networks</h3></a>
+			<img src="img/bg_model/ActionSelection.png" class="oscillation-figure"/>
+			<img src="img/bg_model/ActiveMaintenance.png" class="oscillation-figure"/>
+			<img src="img/bg_model/BumpAttractor.png" class="oscillation-figure"/>
+			<img src="img/bg_model/ActionSelection.png" class="oscillation-figure"/>
+			<img src="img/bg_model/CommunicationThroughCoherence.png" class="oscillation-figure"/>
+			<img src="img/bg_model/CriticalPoint.png" class="oscillation-figure"/>
+			<img src="img/bg_model/DirectPathway.png" class="oscillation-figure"/>
+		</div>
+		<script>
+$(function() {
+	$('.topnav-spacer').height($('.topnav').height() - 2)
+	$("#slideshow-container").on("swipe", swipeHandler);
+	$(".oscillation-figure").hide();
+	nextSlide();
+});
+
+var slideIndex = 1;
+
+function nextSlide() {
+	var slides = document.getElementsByClassName("oscillation-figure");
+	$(slides[slideIndex]).hide("slide", { direction: "left" }, 1000);
+	slideIndex = slideIndex + 1 == slides.length ? 0 : slideIndex + 1;
+	$(slides[slideIndex]).show("slide", { direction: "right" }, 1000);
+}
+
+function previousSlide() {
+	var slides = document.getElementsByClassName("oscillation-figure");
+	$(slides[slideIndex]).hide("slide", { direction: "right" }, 1000);
+	slideIndex = slideIndex - 1 == -1 ? slides.length - 1 : slideIndex - 1;
+	$(slides[slideIndex]).show("slide", { direction: "left" }, 1000);
+}
+
+function swipeHandler(event) {
+	var dx = event.swipestop.coords[0] - event.swipestart.coords[0];
+	if (dx > 10) {
+		previousSlide();
+	} else if (dx < -10) {
+		nextSlide();
+	}
+}
+		</script>
+	</body>
+</html>

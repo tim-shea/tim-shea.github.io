@@ -1,3 +1,7 @@
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
 .topnav {
 	overflow: hidden;
 	background-color: #333;
@@ -68,12 +72,20 @@
 }
 
 .content-section {
+	max-width: 960px;
 	padding: 0.5em;
+	margin: 0 auto;
 }
 
 .photo-slideshow {
 	height: 70%;
 	margin: 0 auto;
+}
+
+.photo {
+	width: 75%;
+	margin: 0 auto;
+	display: block;
 }
 
 .fade-in {
@@ -115,10 +127,13 @@
 
 ::-webkit-scrollbar { width: 0px; }
 
-h3 {
+h1, h2, h3, h4, h5, h6 {
 	text-shadow: none;
+	font-family: 'Montserrat', sans-serif;
 }
 
 a {
 	text-shadow: none;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
 }

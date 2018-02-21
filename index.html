@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300|Montserrat|Open+Sans:300,400" rel="stylesheet">
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -30,22 +31,29 @@
 			</div>
 		</div>
 		<div class="content-section">
-			<p>I'm a PhD student in California studying the mind and brain. My primary research interests are how
-			organization and dynamics in the brain give rise to complex cognition, and how humans and artificial
-			agents might learn to follow instructions and create plans. I love to play strategy games in my scarce
-			free time and whenever possible I try to retreat into the mountains with my best friend.</p>
+			<p>I'm a PhD student at the University of California, Merced studying the mind and brain. My primary
+			research interests are how organization and dynamics in the brain give rise to complex cognition, and
+			how humans and artificial agents might learn to follow instructions and create plans. I love to play
+			strategy games in my free time and whenever possible I retreat into the mountains with my best friend.</p>
 		</div>
 		<div class="content-section">
-			<a name="projects" id="projects"><h3>Recent Projects</h3></a>
+			<a name="projects" id="projects"></a>
+			<h3>Recent Projects</h3>
 			
 			<h4>Emergent Oscillations in Brain Networks</h4>
-			<p>Collaborators: Dave Noelle, Anne Warlaumont, Ramesh Balasubramaniam</p>
+			<p>Collaborators: Dave Noelle, <a href="https://www.annewarlaumont.org/">Anne Warlaumont</a>,
+			<a href="https://www.rameshlab.com/">Ramesh Balasubramaniam</a></p>
 			<p>Manuscript in preparation |
 			<a href="oscillations.html" target="_blank">visualized</a> |
 			<a href="doc/SfN2017_Poster.pdf" target="_blank">Poster @ SfN 2017</a> |			
 			<a href="https://github.com/tim-shea/expresscogs" target="_blank">github</a></p>
 			
 			<h4>Deep Learning + Robot Arm Simulation</h4>
+			<div>
+				<img src="img/GazeboSim.gif" class="photo" title="Simulated 3-joint Arm in Gazebo, controlled by python via ROS."/>
+				<img src="img/MotorConvNetTable.png" class="photo" title="Summary of deep neural network model exploration. None of the initial models performed well overall."/>
+				<img src="img/MotorConvNetTrajectories.png" class="photo" title="Trajectories from the final model after extensive tuning. Left side shows the best 3 trials, right shows the worst."/>
+			</div>
 			<p><a href="http://nbviewer.jupyter.org/github/tim-shea/code-everyday/blob/master/motorconvnet/MotorConvNet.ipynb"
 			target="_blank">jupyter nb</a> |
 			<a href="https://github.com/tim-shea/code-everyday/tree/master/motorconvnet" target="_blank">github</a></p>
@@ -64,13 +72,17 @@
 			<p><a href="doc/NCPW15_IVFCR.pdf" target="_blank">Poster @ NCPW 2016</a></p>
 		</div>
 		<div class="content-section" id="slideshow-container" onclick="plusDivs(+1)">
-			<a name="photos" id="photos"><h3>Photos</h3></a>
-			<img src="img/KayakingSelfie.jpg" class="photo-slideshow"/>
-			<img src="img/SculptureGarden.jpg" class="photo-slideshow"/>
-			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"/>
-			<img src="img/PavlovsDogs.jpg" class="photo-slideshow"/>
+			<a name="photos" id="photos"></a>
+			<h3>Photos</h3>
+			<img src="img/KayakingSelfie.jpg" class="photo-slideshow" title="Kayaking near Murphys, CA. Chelsea Gordon was just out of frame somewhere."/>
+			<img src="img/SculptureGarden.jpg" class="photo-slideshow" title="A strange fractured globe in a sculpture garden just off the mall in Washington, D.C."/>
+			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"
+			title="The Washington Monument at dusk. Dan Comstock, Jessica Ross, and I were very cold when I took this picture. D.C. in November is not like California in November."/>
+			<img src="img/PavlovsDogs.jpg" class="photo-slideshow" title="Pavlov's Dogs playing in Washington, D.C. Dan Comstock">
+			<img src="img/LouisInWeekendBag.jpg" class="photo-slideshow" title="Louis is ready for a trip.">
+			<img src="img/BlurryTimAndLouis.jpg" class="photo-slideshow" title="Louis and I.">
 		</div>
-		<div class="content-section" id="footer">
+		<div class="content-section" id="footer" style="max-width: 100%">
 		</div>
 		<script>
 $(function() {

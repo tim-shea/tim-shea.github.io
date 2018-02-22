@@ -20,9 +20,9 @@
 		<a name="bio" id="bio"></a>
 		<div class="banner">
 			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
-				<h1 style="font-family: sans-serif; color: white; margin: 0;">Tim Shea</h1>
-				<h3 style="font-family: sans-serif; color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
-				<h3 style="font-family: sans-serif; margin: 0;"><span id="obf"><script>
+				<h1 style="color: white; margin: 0;">Tim Shea</h1>
+				<h3 style="color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
+				<h3 style="margin: 0;"><span id="obf"><script>
 				document.getElementById("obf").innerHTML="<n uers=\"znvygb:gvz.z.furn@tznvy.pbz\" gnetrg=\"_oynax\">rznvy</n>".replace(
 				/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
 				</script></span>
@@ -31,44 +31,102 @@
 			</div>
 		</div>
 		<div class="content-section">
+			<p>In the future, I will help to build cognitive technologies that integrate modern research with
+			practical engineering. I like to think about all sorts of problems, and love learning new tools to
+			address new challenges. I've been coding for almost 20 years in various languages. Solving problems
+			in code is exciting, but many problems are easier to solve by interacting with people than by building
+			a tool, so I am also a proponent of organizing social solutions to problems.</p>
 			<p>I'm a PhD student at the University of California, Merced studying the mind and brain. My primary
-			research interests are how organization and dynamics in the brain give rise to complex cognition, and
-			how humans and artificial agents might learn to follow instructions and create plans. I love to play
-			strategy games in my free time and whenever possible I retreat into the mountains with my best friend.</p>
+			interests are how organization and dynamics in the brain give rise to complex cognition, and how humans
+			and artificial agents might learn to follow instructions and create plans. I love to play strategy
+			games in my free time and whenever possible I retreat into the mountains with my best friend.</p>
+			<p>Before starting my PhD, I studied Computer Science at California State University, Sacramento. I
+			concentrated in artificial intelligence. I also worked at the California SWRCB, an agency within the
+			California EPA, where I supported environmental remediation programs by building information systems.</p>
+			
 		</div>
 		<div class="content-section">
 			<a name="projects" id="projects"></a>
 			<h3>Recent Projects</h3>
 			
 			<h4>Emergent Oscillations in Brain Networks</h4>
-			<p>Collaborators: Dave Noelle, <a href="https://www.annewarlaumont.org/">Anne Warlaumont</a>,
+			<p>Past models of basal ganglia circuits emphasize reinforcement learning, but fail
+			to explain oscillations in the basal ganglia that vary across tasks and conditions.
+			We built a spiking neural network model that explains the emergence and variation
+			over time of basal ganglia oscillations. The model depends on spike synchronization
+			to produce oscillations with similar properties to human brain waves.
+			The model can exhibit either strong oscillations or strong selection, which is
+			important for carrying out decisions, and it can rapidly switch between these states.
+			These results are consistent with an emerging perspective on how oscillations in the
+			brain provide an active substrate for communication, allowing information to spread
+			quickly to all the regions where it is needed.</p>
+			<div>
+				<img src="img/SfNDiagram.png" class="photo" style="width: 50%"
+				title="This diagram shows the major excitatory and inhibitory pathways of the basal ganglia included in our model."/>
+			</div>
+			<p>Collaborators: <a href="https://www.ucmerced.edu/content/david-c-noelle">Dave Noelle</a>,
+			<a href="https://www.annewarlaumont.org/">Anne Warlaumont</a>,
 			<a href="https://www.rameshlab.com/">Ramesh Balasubramaniam</a></p>
+			<p>Java | Python</p>
 			<p>Manuscript in preparation |
 			<a href="oscillations.html" target="_blank">visualized</a> |
 			<a href="doc/SfN2017_Poster.pdf" target="_blank">Poster @ SfN 2017</a> |			
 			<a href="https://github.com/tim-shea/expresscogs" target="_blank">github</a></p>
 			
 			<h4>Deep Learning + Robot Arm Simulation</h4>
+			<p>Learning a motor transfer function for a simple, 3-joint arm--as opposed to the dozens of skeletal joints and
+			hundreds of independent muscles of the human arm--is a difficult problem. Physical constraints, friction, non-linear
+			torque scaling, and many other factors contribute to <em>complexity</em> in the relationship between a motor command
+			and the controlled endpoint. I trained deep neural networks in tensorflow to predict the position of the hand from a
+			motor command for a simulated robot arm. I found that convolution and high dropout rates yielded the best performing
+			solutions, but predictions of the hand position still tended to diverge over 1 - 2 seconds from the actual position,
+			indicating that a closed feedback loop almost certainly required to model this complex, dynamical system.</p>
 			<div>
 				<img src="img/GazeboSim.gif" class="photo" title="Simulated 3-joint Arm in Gazebo, controlled by python via ROS."/>
 				<img src="img/MotorConvNetTable.png" class="photo" title="Summary of deep neural network model exploration. None of the initial models performed well overall."/>
-				<img src="img/MotorConvNetTrajectories.png" class="photo" title="Trajectories from the final model after extensive tuning. Left side shows the best 3 trials, right shows the worst."/>
 			</div>
 			<p><a href="http://nbviewer.jupyter.org/github/tim-shea/code-everyday/blob/master/motorconvnet/MotorConvNet.ipynb"
 			target="_blank">jupyter nb</a> |
 			<a href="https://github.com/tim-shea/code-everyday/tree/master/motorconvnet" target="_blank">github</a></p>
 			
 			<h4>Embodied Word Learning in Virtual Reality</h4>
-			<p>Collaborators: Chelsea Gordon, Ramesh Balasubramaniam, Dave Noelle</p>
+			<p>We developed a new experimental method to study how sensorimotor interaction influences word learning. Using
+			Unreal Engine and the HTC Vive, we taught participants novel words for six potions. In the forthcoming paper, we
+			describe how participants' interactions with the potions shape their later responses to those novel words. This
+			provides new evidence that language is active: it describes the ways our bodies interact with the world.</p>
+			<div>
+				<img src="img/WLVRScreenshot.png" class="photo" title=""/>
+			</div>
+			<p>Collaborators: <a href="https://www.rameshlab.com/people.html">Chelsea Gordon</a>, Ramesh Balasubramaniam, Dave Noelle</p>
 			<p>Manuscript in preparation</p>
 			
 			<h4>Modeling Infant Speech Development with Spiking Neural Networks</h4>
+			<p>We connected a spiking neural network model to an articulatory synthesizer--a computational simulation of a
+			human vocal tract--to investigate the ways that auditory feedback might shape motor control for speech. We found
+			that very simple reservoir style networks are capable of learning to shape the vocal tract to produce moderately 
+			syllabic sounds (i.e. rhythmic opening of the jaw to produce "Ogg-Ogg-Ogg").</p>
+			<audio controls>
+				<source src="snd/Sound_Salience21_3.wav" type="audio/wav"/>
+			</audio>
+			<audio controls>
+				<source src="snd/Sound_Salience20_9.wav" type="audio/wav"/>
+			</audio>
+			<audio controls>
+				<source src="snd/Sound_Salience3_64.wav" type="audio/wav"/>
+			</audio>
 			<p>Advisor: Anne Warlaumont</p>
 			<p><a href="doc/NCPW15_BabbleNN.pdf" target="_blank">Poster @ NCPW 2016</a> |
 			<a href="https://github.com/tim-shea/BabbleNN" target="_blank">github</a></p>
 			
 			<h4>Deep Autoencoding of Naturalistic Infant and Parent Vocalizations</h4>
-			<p>Collaborators: Anne Warlaumont, Chris Kello, Dave Noelle, Gina Pretzer, Eric Walle</p>
+			<p>We adapted a deep auto-encoder network to reconstruct naturalistic infant and parent speech sounds. We then used
+			the model to explore similarity between the sounds produced at different ages, and mapped the responses of hidden
+			layer units to visualize the underlying structure of the dataset.</p>
+			<div>
+				<img src="img/NCPW15_IVFCR.png" class="photo" title=""/>
+			</div>
+			<p>Collaborators: Anne Warlaumont, <a href="https://www.ucmerced.edu/content/christopher-t-kello">Chris Kello</a>,
+			Dave Noelle, <a href="http://www.ginapretzer.com/">Gina Pretzer</a>, <a href="http://idlab.ucmerced.edu/node/17">Eric Walle</a></p>
 			<p><a href="doc/NCPW15_IVFCR.pdf" target="_blank">Poster @ NCPW 2016</a></p>
 		</div>
 		<div class="content-section" id="slideshow-container" onclick="plusDivs(+1)">
@@ -78,11 +136,14 @@
 			<img src="img/SculptureGarden.jpg" class="photo-slideshow" title="A strange fractured globe in a sculpture garden just off the mall in Washington, D.C."/>
 			<img src="img/WashingtonMonument.jpg" class="photo-slideshow"
 			title="The Washington Monument at dusk. Dan Comstock, Jessica Ross, and I were very cold when I took this picture. D.C. in November is not like California in November."/>
-			<img src="img/PavlovsDogs.jpg" class="photo-slideshow" title="Pavlov's Dogs playing in Washington, D.C. Dan Comstock">
+			<img src="img/PavlovsDogs.jpg" class="photo-slideshow" title="Pavlov's Dogs playing in Washington, D.C.">
 			<img src="img/LouisInWeekendBag.jpg" class="photo-slideshow" title="Louis is ready for a trip.">
 			<img src="img/BlurryTimAndLouis.jpg" class="photo-slideshow" title="Louis and I.">
+			<img src="img/UCMercedInFog.jpg" class="photo-slideshow" title="The view facing south along the main drag of UCM on a foggy day.">
 		</div>
 		<div class="content-section" id="footer" style="max-width: 100%">
+			<p>I made all of these things, so (c) Tim Shea, but please use anything you find here however you like
+			(<a href="https://opensource.org/licenses/MIT">MIT license</a>). This page was updated Feb. 20, 2018.</p>
 		</div>
 		<script>
 $(function() {

@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300|Montserrat|Open+Sans:300,400" rel="stylesheet">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<title>Simulation Workshop</title>
+	</head>
+	<body style="margin: 0; font-family: sans-serif;">
+		<div class="topnav" id="myTopnav">
+			<a class="nav-option">Bio</a>
+			<a class="nav-option">Projects</a>
+			<a class="nav-option">Photos</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showNav()">&#9776;</a>
+		</div>
+		<div class="topnav-spacer"></div>
+		<div class="banner">
+			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
+				<h1 style="color: white; margin: 0;">Simulation Workshop</h1>
+				<h3 style="color: lightgrey; margin: 0;">Cognitive and Information Sciences, University of California, Merced</h2>
+			</div>
+		</div>
+		<div class="content-section">
+			<a name="schedule" id="schedule"></a>
+			<h3>Schedule</h3>
+			<p>Here is the schedule.</p>
+		</div>
+		<div class="content-section">
+			<a name="organizers" id="organizers"></a>
+			<h3>Organizers</h3>
+			<div><p>Chelsea Gordon</p></div>
+			<div><p>Teenie Matlock</p></div>
+			<div><p>Timothy Shea</p></div>
+			<div><p>Ayme Tomson</p></div>
+		</div>
+		<div class="content-section" id="footer" style="max-width: 100%">
+			<p>(c) Tim Shea, (<a href="https://opensource.org/licenses/MIT">MIT license</a>).
+			This page was updated Mar. 19, 2018.</p>
+		</div>
+		<script>
+$(function() {
+	$('.topnav-spacer').height($('.topnav').height() - 2)
+	$('.nav-option').click(function(){
+		var id = $(this).text().toLowerCase();
+		var target = $('#' + id);
+		var offset = $('.topnav-spacer').height();
+		console.log(target);
+		$('html, body').animate({
+			scrollTop: target.offset().top - offset
+		}, 800);
+		showNav();
+	});
+});
+
+function showNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300|Montserrat|Open+Sans:300,400" rel="stylesheet">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<title>VR Toolkit</title>
+	</head>
+	<body style="margin: 0; font-family: sans-serif;">
+		<div class="topnav" id="myTopnav">
+			<a class="nav-option">Top</a>
+			<a class="nav-option">Vision</a>
+			<a class="nav-option">Team</a>
+			<a class="nav-option">Features</a>
+			<a class="nav-option">Gallery</a>
+			<a class="nav-option">Timeline</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="showNav()">&#9776;</a>
+		</div>
+		<div class="topnav-spacer"></div>
+		<a name="top" id="top"></a>
+		<div class="banner">
+			<div style="display: inline-block; background-color: rgba(0,0,0,0.3); margin: 1em 0 1em 0; padding: 0.25em;">
+				<h1 style="color: white; margin: 0;">Virtual Reality Research Toolkit for Unreal Engine 4</h1>
+			</div>
+		</div>
+		<div class="content-section">
+			<a name="vision" id="vision"></a>
+			<h3>Vision</h3>
+			<p>
+			The cognitive sciences (psychology, neuroscience, linguistics, and others) rely on behavioral
+			experiments to understand the nature of the mind and brain. A great many of these experiments
+			make use of narrow, artificial stimulus-response paradigms, limiting the effectiveness of the
+			scientific conclusions. With the advent of inexpensive, high-quality virtual reality systems,
+			there is now an opportunity to develop experiments with ecologically valid (i.e. natural)
+			environments and rich interactions, to better understand real cognitive processes in the wild.
+			</p>
+			<p>
+			We are a small group of cognitive neuroscientists building virtual reality experiments using
+			Unreal Engine.  The goal of our project is to expand the accessibility and replicability of
+			behavioral research in VR by building an open-source toolkit as an add-on for Unreal Engine 4.
+			We strongly believe that wider adoption of VR experimental methods in cognitive and behavioral
+			sciences will push the frontiers of scientific knowledge forward and therefore we hope to ease
+			the adoption of this approach by providing standardized, extensible, and simple tools to solve
+			common challenges.
+			</p>
+		</div>
+		<div class="content-section">
+			<a name="team" id="team"></a>
+			<h3>Team</h3>
+			<div class="small-photo">
+				<img src="img/KayakingSelfieWide.jpg">
+				<p>Timothy Shea</p>
+			</div>
+			<div class="small-photo">
+				<img src="img/Chelsea.jpg">
+				<p>Chelsea Gordon</p>
+			</div>
+			<div class="small-photo">
+				<img src="img/Ramesh.jpg">
+				<p>Ramesh Balasubramaniam</p>
+			</div>
+			<div class="small-photo">
+				<img src="img/Dave.jpg">
+				<p>David Noelle</p>
+			</div>
+		</div>
+		<div class="content-section">
+			<a name="features" id="features"></a>
+			<h3>Features</h3>
+			<ul>
+				<li>Robust, reusable components for managing trials, blocks, and conditions.</li>
+				<li>Easy-to-use, extensible sample experiments.</li>
+				<li>An extended, research-friendly starter content package with simple materials, objects,
+				and particle systems.</li>
+				<li>Configurable event-based data logging.</li>
+				<li>Built-in support for preprocessing and recording motion data to common formats.</li>
+				<li>Motion-data visualization and trial-by-trial playback in VR.</li>
+				<li>Comprehensive documentation and tutorials on how to use the toolkit for common tasks.</li>
+				<li>An online community for toolkit support, networking, sharing content and promoting the
+				use of VR in science.</li>
+			</ul>
+		</div>
+		<div class="content-section">
+			<a name="gallery" id="gallery"></a>
+			<h3>Gallery</h3>
+			<div class="short-photo">
+				<img src="img/Screenshot1.png">
+			</div>
+			<div class="short-photo">
+				<img src="img/Screenshot2.png">
+			</div>
+			<div class="short-photo">
+				<img src="img/Screenshot3.png">
+			</div>
+			<div class="short-photo">
+				<img src="img/Screenshot4.png">
+			</div>
+		</div>
+		<div class="content-section">
+			<a name="timeline" id="timeline"></a>
+			<h3>Timeline</h3>
+			<p>
+			We plan to spend 3 - 6 months on primary development and documentation, followed by
+			a longer period of developing videos and tutorials, community-building, assembling
+			starter content. A usable beta build should be ready within 6 - 12 months.
+			</p>
+		</div>
+		<div class="content-section" id="footer" style="max-width: 100%">
+			<p>I made all of these things, so (c) Tim Shea, but please use anything you find here however you like
+			(<a href="https://opensource.org/licenses/MIT">MIT license</a>). This page was updated Mar. 19, 2018.</p>
+		</div>
+		<script>
+$(function() {
+	$('.topnav-spacer').height($('.topnav').height() - 2)
+	$('.nav-option').click(function(){
+		var id = $(this).text().toLowerCase();
+		var target = $('#' + id);
+		var offset = $('.topnav-spacer').height();
+		console.log(target);
+		$('html, body').animate({
+			scrollTop: target.offset().top - offset
+		}, 800);
+		showNav();
+	});
+});
+
+function showNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+		</script>
+	</body>
+</html>

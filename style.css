@@ -1,4 +1,4 @@
-p {
+p, li {
 	font-family: 'Montserrat', sans-serif;
 	text-align: justify;
 }
@@ -81,6 +81,23 @@ p {
 .photo-slideshow {
 	height: 70%;
 	margin: 0 auto;
+}
+
+.short-photo {
+	display: inline-block;
+}
+
+.short-photo img {
+	height: 30%;
+}
+
+.small-photo {
+	width: 24%;
+	display: inline-block;
+}
+
+.small-photo img {
+	width: 100%;
 }
 
 .photo {
